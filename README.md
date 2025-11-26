@@ -75,17 +75,5 @@ npm run dev
 
 ---
 
-## ✅ Requisitos Atendidos
-
-✅ Listagem e detalhes de produtos  
-✅ Carrinho com Context API  
-✅ Validação de estoque  
-✅ CRUD de produtos (sem edição)  
-✅ Validações de formulário  
-✅ React Router  
-✅ Estilização com Tailwind  
-✅ Página 404  
-
----
 
 **Desenvolvido para avaliação prática AS**
