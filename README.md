@@ -1,18 +1,91 @@
-# React + Vite
+# 🛒 Mini E-commerce com React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto de e-commerce desenvolvido com React, React Router, Context API e TailwindCSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## 🎯 Funcionalidades
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Listagem de produtos
+- Detalhes do produto
+- Carrinho de compras com validação de estoque
+- Adicionar, aumentar, diminuir e remover itens
+- Cadastro de novos produtos com validações
+- Navegação entre páginas
+- Página 404
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 🧩 Context API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+O **CartContext** gerencia globalmente o carrinho de compras, evitando prop drilling.
+
+**Principais funções:**
+- `addToCart()` - Adiciona produtos
+- `removeFromCart()` - Remove produtos
+- `aumentarQuantidade()` / `diminuirQuantidade()` - Ajusta quantidades
+- `getTotalCarrinho()` - Calcula total
+- `getQuantidadeItens()` - Conta itens
+
+**Onde é usado:**
+- **Header** - Badge com total de itens
+- **DetalhesProduto** - Adicionar ao carrinho
+- **Carrinho** - Gerenciar todos os itens
+
+---
+
+## 🌐 API (JSON Server)
+
+**Base URL:** `http://localhost:3001`
+
+**Endpoints:**
+- `GET /produtos` - Lista produtos (Home)
+- `GET /produtos/:id` - Busca por ID (Detalhes)
+- `POST /produtos` - Cria produto (Cadastro)
+
+---
+
+## 🎨 Hooks Utilizados
+
+- **useState** - Estados locais
+- **useEffect** - Chamadas à API
+- **useContext** - Acesso ao CartContext
+- **useRef** - Foco em campos inválidos
+- **useParams** - ID da URL
+- **useNavigate** - Redirecionamentos
+
+---
+
+## 📦 Como Rodar
+```bash
+# Instalar dependências
+npm install
+
+# Terminal 1 - JSON Server
+npm run server
+
+# Terminal 2 - React
+npm run dev
+```
+
+**Acessar:**
+- Frontend: http://localhost:5173
+- API: http://localhost:3001
+
+---
+
+## ✅ Requisitos Atendidos
+
+✅ Listagem e detalhes de produtos  
+✅ Carrinho com Context API  
+✅ Validação de estoque  
+✅ CRUD de produtos (sem edição)  
+✅ Validações de formulário  
+✅ React Router  
+✅ Estilização com Tailwind  
+✅ Página 404  
+
+---
+
+**Desenvolvido para avaliação prática AS**
