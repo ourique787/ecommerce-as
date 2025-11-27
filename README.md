@@ -4,13 +4,6 @@ Projeto de e-commerce desenvolvido com React, React Router, Context API e Tailwi
 
 ---
 
-## 🚀 Tecnologias
-
-- React 19.2.0 | React Router DOM 7.9.6 | Context API
-- TailwindCSS 3 | JSON Server 0.17.4 | Vite 7.2.4
-
----
-
 ## 🎯 Funcionalidades
 
 - Listagem de produtos
